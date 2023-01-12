@@ -1,13 +1,14 @@
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route } from 'react-router';
+import { PokemonsPage } from './pages';
 
-function App() {
+export const App = () => {
   return (
     <BrowserRouter>
-      <Routes></Routes>
+      <Routes>
+        <Route path='/' element={<PokemonsPage />} />
+      </Routes>
     </BrowserRouter>
   );
-}
-
-export default App;
+};
